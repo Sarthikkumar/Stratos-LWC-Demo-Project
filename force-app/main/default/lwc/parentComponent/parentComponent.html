@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Parent Component">
+        <lightning-button-group class="slds-m-around_medium">
+            <lightning-button label="Active" onclick={handleActive}></lightning-button>
+            <lightning-button label="Inactive" onclick={handleInactive}></lightning-button>
+        </lightning-button-group>
+        <c-child-component active-status={value}></c-child-component>
+    </lightning-card>
+</template>

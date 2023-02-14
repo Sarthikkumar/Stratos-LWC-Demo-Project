@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Subscriber">
+        <lightning-button-group class="slds-m-around_medium">
+            <lightning-button label="Subscribe" onclick={subscribeToMessageChannel}></lightning-button>
+            <lightning-button label="Unsubscribe" onclick={unSubscribeToMessageChannel}></lightning-button>
+        </lightning-button-group>
+        <br/>
+        <p class="slds-m-around_medium">Message Recieved :</p> 
+        <template if:true={messages}>
+            <!--<template if:true={subscribed}> -->
+             <template for:each={messages} for:item="message"> 
+                 <h1 class="slds-m-around_medium" key={message}>{message}</h1>
+              </template>
+        </template>
+       <!-- </template> -->
+    </lightning-card>
+</template>

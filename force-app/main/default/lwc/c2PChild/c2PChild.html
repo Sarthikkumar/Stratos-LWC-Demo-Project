@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Child Component" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+  
+            <lightning-combobox
+                name="Account"
+                label="Account"
+                value={value}
+                placeholder="Select Account"
+                options={mapData}
+                onchange={handleChange}
+                >
+            </lightning-combobox>
+    </div>
+    </lightning-card>
+</template>

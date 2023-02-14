@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title='Simple LWC'> 
+<div class="slds-m-around_medium">
+        <lightning-tabset>
+            <lightning-tab label="Button">
+                <lightning-button variant="neutral" label="Button" title="Looks like a link" onclick={handleClick}></lightning-button>
+            </lightning-tab>
+            <lightning-tab label="Button Group" title="2nd tab extended title">
+                <lightning-button-group>
+                    <lightning-button label="Button 1" onclick={handleClick}></lightning-button>
+                    <lightning-button label="Button 2" icon-name="utility:save" onclick={handleClick}></lightning-button>
+              </lightning-button-group>
+            </lightning-tab>
+            <lightning-tab label="Combo Box">
+                <lightning-combobox
+                name="City"
+                label="City"
+                value={value}
+                placeholder="Select City"
+                options={options}
+                onchange={handleChange} >
+            </lightning-combobox>
+            </lightning-tab>
+        </lightning-tabset>
+
+        <lightning-input type="text" label="Sample Text Box" placeholder="Enter Text Here" onchange={handleInputChange}></lightning-input>
+        <br/>
+        <p>You Have Entered : {textValue}</p>
+    </div>
+    </lightning-card>
+</template>

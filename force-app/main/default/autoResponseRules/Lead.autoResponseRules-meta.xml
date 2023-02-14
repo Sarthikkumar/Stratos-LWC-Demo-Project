@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Lead Auto Response</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Lead.Email</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.FirstName</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.LastName</field>
+                <operation>notEqual</operation>
+            </criteriaItems>
+            <senderEmail>sarthikkumarblock5@gmail.com</senderEmail>
+            <senderName>Sarthik Kumar</senderName>
+            <template>unfiled$public/SalesNewCustomerEmail</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

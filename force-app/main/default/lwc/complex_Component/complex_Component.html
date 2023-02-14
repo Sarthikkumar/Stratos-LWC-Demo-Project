@@ -1,0 +1,52 @@
+<template>
+    <lightning-card title="Complex LWC" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+  
+            <lightning-combobox
+                name="Account"
+                label="Account"
+                value={value}
+                placeholder="Select Account"
+                options={mapData}
+                onchange={handleChange}
+                >
+            </lightning-combobox>
+            <p>Account ID : {selectedOption}</p>
+    </div>
+    <template for:each={mapData} for:item="map">
+        {map.Name}
+    </template>
+        <div class="slds-m-around_medium">
+            <template if:true={contacts.data}>
+                <h2> Contacts </h2>
+                <lightning-datatable
+                    key-field="Id"
+                    data={contacts.data}
+                    columns={columns}
+                    onsave={handleSave}
+                    draft-values={draftValues}>
+                </lightning-datatable>
+            </template>
+            <template if:true={contacts.error}>
+                Error Occured !! Please try again later.
+            </template>
+        </div>
+
+        <div class="slds-m-around_medium">
+            <template if:true={opportunities.data}>
+                <h2> Opportunities </h2>
+                <lightning-datatable
+                    key-field="Id"
+                    data={opportunities.data}
+                    columns={OppColumns}
+                    onsave={handleSave}
+                    draft-values={draftValues}>
+                </lightning-datatable>
+            </template>
+            <template if:true={contacts.error}>
+                Error Occured !! Please try again later.
+            </template>
+        </div>
+
+    </lightning-card>
+</template>

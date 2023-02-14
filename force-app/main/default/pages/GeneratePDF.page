@@ -1,0 +1,14 @@
+<apex:page extensions="attachPDFToAccount" standardController="Account" renderAs="pdf">
+<apex:form >
+<apex:actionFunction name="passToController" rerender="test">
+<apex:param name="render" value="Hi"/>  
+</apex:actionFunction>
+      <table border="1" cellspacing="0" style="text-align:center">
+<tr> 
+ <th colspan="2"> 
+ <h1>Hi Hello, How are you !!!!!!!!!!!!!!!!!!!!!!!!</h1>
+</th>
+</tr>
+</table>
+</apex:form>
+</apex:page>

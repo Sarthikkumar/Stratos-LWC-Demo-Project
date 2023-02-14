@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Parent Component">
+    <c-c2-p-child onaccountchange={handleAccountChange}></c-c2-p-child>
+    <template if:true={cases.data}>
+        <div class="slds-m-around_medium">
+        <h2> Related Cases </h2>
+        <lightning-datatable
+        key-field="Id"
+        data={cases.data}
+        columns={columns}>
+        </lightning-datatable>
+        </div>  
+    </template>
+</lightning-card>
+</template>

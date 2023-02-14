@@ -1,0 +1,2 @@
+<apex:page action="{!attachPDF}" extensions="attachPDFToAccount1" standardController="Account">
+</apex:page>
